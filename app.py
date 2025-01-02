@@ -17,5 +17,4 @@ def predict():
     return jsonify(message)
 if __name__ == "__main__":
     app.run(debug=True)
-    #não sei 4
-    #socorro
+ 
