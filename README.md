@@ -1,53 +1,47 @@
-# Chatbot Deployment with Flask and JavaScript
 
-In this tutorial we deploy the chatbot I created in [this](https://github.com/python-engineer/pytorch-chatbot) tutorial with Flask and JavaScript.
+# Chatbot simples com Flask e JavaScript
 
-This gives 2 deployment options:
-- Deploy within Flask app with jinja2 template
-- Serve only the Flask prediction API. The used html and javascript files can be included in any Frontend application (with only a slight modification) and can run completely separate from the Flask App then.
+Essa é a minha versão do chat bot que pode ser encontrado [aqui](https://github.com/python-engineer/pytorch-chatbot)
 
-## Initial Setup:
-This repo currently contains the starter files.
 
-Clone repo and create a virtual environment
-```
-$ git clone https://github.com/python-engineer/chatbot-deployment.git
-$ cd chatbot-deployment
-$ python3 -m venv venv
-$ . venv/bin/activate
-```
-Install dependencies
-```
-$ (venv) pip install Flask torch torchvision nltk
-```
-Install nltk package
-```
-$ (venv) python
->>> import nltk
->>> nltk.download('punkt')
-```
-Modify `intents.json` with different intents and responses for your Chatbot
+## Preparação de Ambiente:
 
-Run
-```
-$ (venv) python train.py
-```
-This will dump data.pth file. And then run
-the following command to test it in the console.
-```
-$ (venv) python chat.py
-```
 
-Now for deployment follow my tutorial to implement `app.py` and `app.js`.
+clonar repositório e criar ambiente virtual
 
-## Watch the Tutorial
-[![Alt text](https://img.youtube.com/vi/a37BL0stIuM/hqdefault.jpg)](https://youtu.be/a37BL0stIuM)  
-[https://youtu.be/a37BL0stIuM](https://youtu.be/a37BL0stIuM)
+Detalhe Importante, os comandos são em Shell e pode mudar caso seu terminal seja Bash ou qualquer outro
+```
+git clone https://github.com/Xesadas/Chatbot.git
+cd Chatbot
+python -m venv venv
+venv/scripts/activate
+```
+Instalar dependências
+```
+pip install Flask torch torchvision nltk
+```
+Instalar pacote nltk 
+```
+python
+import nltk
+nltk.download('punkt')
+```
+Modifique `intents.json` com diferentes perguntas e respostas de acordo com a sua necessidade
 
-## Note
-In the video we implement the first approach using jinja2 templates within our Flask app. Only slight modifications are needed to run the frontend separately. I put the final frontend code for a standalone frontend application in the [standalone-frontend](/standalone-frontend) folder.
+Treine o bot 
+```
+python train.py
+```
+Isso irá gerar o arquivo data.pth. Em seguida, execute o seguinte comando no console para testá-lo:
+```
+python chat.py
+```
+Em seguida, vá até o app.py e dê run!
 
-## Credits:
-This repo was used for the frontend code:
+(Frontend levemente bugado, aceito correções)
+## Creditos:
+Essa repo foi usada no frontend code:
 https://github.com/hitchcliff/front-end-chatjs
-# teste2
+
+
+
