@@ -16,14 +16,14 @@
                 </div>
                 <div class="chatbox__content--header">
                     <h4 class="chatbox__heading--header">Chat support</h4>
-                    <p class="chatbox__description--header">Hi. My name is Sam. How can I help you?</p>
+                    <p class="chatbox__description--header">Olá. Meu nome é Sam. Como posso ajudar?</p>
                 </div>
             </div>
             <div class="chatbox__messages">
                 <div></div>
             </div>
             <div class="chatbox__footer">
-                <input type="text" placeholder="Write a message...">
+                <input type="text" placeholder="Escreva algo!">
                 <button class="chatbox__send--footer send__button">Send</button>
             </div>
         </div>
@@ -33,9 +33,11 @@
     </div>
 </div>
 
-    <script>
-        $SCRIPT_ROOT = {{ request.script_root|tojson }};
-    </script>
+<script data-script-root="{{ request.script_root }}">
+    // O atributo data-script-root será capturado pelo JavaScript
+</script>
+
+
     <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 
 </body>
